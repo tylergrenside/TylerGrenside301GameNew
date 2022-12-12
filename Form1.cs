@@ -18,8 +18,9 @@ namespace TylerGrenside301Game
     public partial class Form1 : Form
     {
         Graphics g; //declare a graphics object called g
+        Dru[] dru = new Dru[7]; //Create enemies
         Slime slime = new Slime();//create object called slime 
-        List<Dru> dru = new List <Dru>();
+        
         bool left, right, up, down;
         string move;
 
@@ -28,9 +29,11 @@ namespace TylerGrenside301Game
             InitializeComponent();
             for (int i = 0; i < 7; i++)
             {
-                int displacement = 10 + (i * 70);
-                dru.Add(new Dru(displacement));
+                int x = 10 + (i * 100);
+                dru[i] = new Dru(x);
             }
+
+
 
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, pnlGame, new object[] { true });
 
@@ -47,17 +50,22 @@ namespace TylerGrenside301Game
         private void pnlGame_Paint(object sender, PaintEventArgs e)
         {
 
-            foreach (Dru p in dru)
+            //get the graphics used to paint on the panel control
+            g = e.Graphics;
+            //call the enemy's class's DrawDru method to draw the image Dru
+            for (int i = 0; i < 7; i++)
             {
-                p.DrawDru(g);//Draw the planet
-                p.moveDru(g);//move the planet
+                //call the enemy's class's drawDru method to draw the images
+                dru[i].DrawDru(g);
             }
 
-            g = e.Graphics;
-            
+
+
+
+
             slime.drawSlime(g);
             
-            this.Invalidate();
+            
 
         }
 

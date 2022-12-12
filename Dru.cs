@@ -10,36 +10,31 @@ namespace TylerGrenside301Game
     class Dru
     {
 
-    
-    // declare fields to use in the class
-    public int x, y, width, height;//variables for the rectangle
-    public Image druImage;//variable for the planet's image
 
-    public Rectangle druRec;//variable for a rectangle to place our image in
-    public int score;
-    //Create a constructor (initialises the values of the fields)
-    public Dru(int displacement)
-    {
-        x = 10;
-        y = displacement;
-        width = 20;
-        height = 20;
-        //druImage contains the dru.png image
-        druImage = Properties.Resources.Dru;
-        druRec = new Rectangle(x, y, width, height);
-    }
-        // Methods for the enemy's class
+        // declare fields to use in the class
+        public int x, y, width, height;//variables for the rectangle
+        public Image druImage;//variable for the planet's image
+
+        public Rectangle druRec;//variable for a rectangle to place our image in
+        public int score;
+        
+        //Create a constructor (initialises the values of the fields)
+        public Dru(int spacing)
+        {
+            x = spacing;
+            y = 10;
+            width = 60;
+            height = 39;
+            //planetImage contains the plane1.png image
+            druImage = Properties.Resources.DruE;
+            druRec = new Rectangle(x, y, width, height);
+        }
+        // Methods for the Planet class
         public void DrawDru(Graphics g)
         {
             druRec = new Rectangle(x, y, width, height);
 
-           /* g.DrawImage(druImage, druRec);*/
-        }
-        public void moveDru(Graphics g)
-        {
-            y += 5;
-            druRec.Location = new Point(x, y);
-
+            g.DrawImage(druImage, druRec);
         }
 
 

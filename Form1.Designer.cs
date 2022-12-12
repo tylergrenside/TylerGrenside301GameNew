@@ -33,6 +33,7 @@ namespace TylerGrenside301Game
             this.pnlGame = new System.Windows.Forms.Panel();
             this.tmrSlime = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.tmrDru = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // pnlGame
@@ -83,6 +84,7 @@ namespace TylerGrenside301Game
         private System.Windows.Forms.Panel pnlGame;
         private System.Windows.Forms.Timer tmrSlime;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer tmrDru;
     }
 }
 

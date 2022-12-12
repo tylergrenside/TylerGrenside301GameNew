@@ -46,7 +46,7 @@ namespace TylerGrenside301Game
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(624, 287);
+            this.textBox1.Location = new System.Drawing.Point(624, 245);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 1;
@@ -54,7 +54,7 @@ namespace TylerGrenside301Game
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(637, 179);
+            this.label1.Location = new System.Drawing.Point(575, 195);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(200, 15);
             this.label1.TabIndex = 2;
