@@ -69,6 +69,23 @@ namespace TylerGrenside301Game
 
         }
 
+        private void tmrDru_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                dru[i].MoveDru();
+                //if an enemy reaches the bottom of the Game Area reposition it at the top
+                if (dru[i].y >= pnlGame.Height)
+                {
+                    dru[i].y = 30;
+                }
+
+                pnlGame.Invalidate();//makes the paint event fire to redraw the panel
+
+            }
+
+        }
+
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.A) { left = true; }

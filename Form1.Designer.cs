@@ -60,6 +60,11 @@ namespace TylerGrenside301Game
             this.label1.TabIndex = 1;
             this.label1.Text = "Highscores";
             // 
+            // tmrDru
+            // 
+            this.tmrDru.Enabled = true;
+            this.tmrDru.Tick += new System.EventHandler(this.tmrDru_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);

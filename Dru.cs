@@ -36,6 +36,12 @@ namespace TylerGrenside301Game
 
             g.DrawImage(druImage, druRec);
         }
+        public void MoveDru()
+        {
+            y += 5;
+
+            druRec.Location = new Point(x, y);
+        }
 
 
     }
