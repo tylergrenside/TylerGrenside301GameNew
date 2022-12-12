@@ -63,6 +63,7 @@ namespace TylerGrenside301Game
             // tmrDru
             // 
             this.tmrDru.Enabled = true;
+            this.tmrDru.Interval = 200;
             this.tmrDru.Tick += new System.EventHandler(this.tmrDru_Tick);
             // 
             // Form1

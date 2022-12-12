@@ -19,6 +19,7 @@ namespace TylerGrenside301Game
     {
         Graphics g; //declare a graphics object called g
         Dru[] dru = new Dru[7]; //Create enemies
+        Random yspeed = new Random();
         Slime slime = new Slime();//create object called slime 
         
         bool left, right, up, down;
@@ -55,6 +56,10 @@ namespace TylerGrenside301Game
             //call the enemy's class's DrawDru method to draw the image Dru
             for (int i = 0; i < 7; i++)
             {
+                // generate a random number from 5 to 20 and put it in rndmspeed
+                int rndmspeed = yspeed.Next(1, 8);
+                dru[i].y += rndmspeed;
+
                 //call the enemy's class's drawDru method to draw the images
                 dru[i].DrawDru(g);
             }
@@ -77,7 +82,7 @@ namespace TylerGrenside301Game
                 //if an enemy reaches the bottom of the Game Area reposition it at the top
                 if (dru[i].y >= pnlGame.Height)
                 {
-                    dru[i].y = 30;
+                    dru[i].y = 10;
                 }
 
                 pnlGame.Invalidate();//makes the paint event fire to redraw the panel

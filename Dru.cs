@@ -23,7 +23,7 @@ namespace TylerGrenside301Game
         {
             x = spacing;
             y = 10;
-            width = 60;
+            width = 50;
             height = 39;
             //planetImage contains the plane1.png image
             druImage = Properties.Resources.DruE;
@@ -38,7 +38,6 @@ namespace TylerGrenside301Game
         }
         public void MoveDru()
         {
-            y += 5;
 
             druRec.Location = new Point(x, y);
         }

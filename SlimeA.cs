@@ -20,7 +20,7 @@ namespace TylerGrenside301Game
         {
             x = 10;
             y = 350;
-            width = 73;
+            width = 50;
             height = 39;
             slime = Properties.Resources.Cabbage_Lad3;
             slimeRec = new Rectangle(x, y, width, height);
@@ -47,7 +47,7 @@ namespace TylerGrenside301Game
                  }
                  else
                  {
-                     x += 5;
+                     x += 2;
                      slimeRec.Location = new Point(x, y);
                  }
 
@@ -63,7 +63,7 @@ namespace TylerGrenside301Game
                  }
                  else
                  {
-                     x -= 5;
+                     x -= 2;
                      slimeRec.Location = new Point(x, y);
                  }
 
@@ -78,7 +78,7 @@ namespace TylerGrenside301Game
                 }
                 else
                 {
-                    y -= 5;
+                    y -= 2;
                     slimeRec.Location = new Point(x, y);
                 }
 
@@ -93,7 +93,7 @@ namespace TylerGrenside301Game
                 }
                 else
                 {
-                    y += 5;
+                    y += 2;
                     slimeRec.Location = new Point(x, y);
                 }
 
