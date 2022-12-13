@@ -39,6 +39,7 @@ namespace TylerGrenside301Game
             this.label3 = new System.Windows.Forms.Label();
             this.lblLives = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.BtnCheck = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pnlGame
@@ -61,9 +62,8 @@ namespace TylerGrenside301Game
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(921, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 15);
+            this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Highscores";
             // 
             // tmrDru
             // 
@@ -116,12 +116,23 @@ namespace TylerGrenside301Game
             this.lblName.TabIndex = 5;
             this.lblName.Text = "label4";
             // 
+            // BtnCheck
+            // 
+            this.BtnCheck.Location = new System.Drawing.Point(869, 23);
+            this.BtnCheck.Name = "BtnCheck";
+            this.BtnCheck.Size = new System.Drawing.Size(132, 38);
+            this.BtnCheck.TabIndex = 6;
+            this.BtnCheck.Text = "See How Other Owners Did";
+            this.BtnCheck.UseVisualStyleBackColor = true;
+            this.BtnCheck.Click += new System.EventHandler(this.BtnCheck_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1013, 447);
+            this.Controls.Add(this.BtnCheck);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblLives);
             this.Controls.Add(this.label3);
@@ -151,6 +162,7 @@ namespace TylerGrenside301Game
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblLives;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button BtnCheck;
     }
 }
 

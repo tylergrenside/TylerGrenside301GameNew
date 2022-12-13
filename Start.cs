@@ -17,7 +17,7 @@ namespace TylerGrenside301Game
             InitializeComponent();
         }
 
-        private void buttonStart_Click(object sender, EventArgs e)
+        private void buttonStart_Click(object sender, EventArgs e)  //Puts game into hard mode (Sets number of lives)
         {
             playerName = txtName.Text;
 
@@ -46,7 +46,7 @@ namespace TylerGrenside301Game
 
         }
 
-        private void buttonNorm_Click(object sender, EventArgs e)
+        private void buttonNorm_Click(object sender, EventArgs e) //Puts game into Normal mode (Decreases number of lives)
         {
             playerName = txtName.Text;
 
@@ -70,7 +70,7 @@ namespace TylerGrenside301Game
             }
         }
 
-        private void buttonHard_Click(object sender, EventArgs e)
+        private void buttonHard_Click(object sender, EventArgs e) //Puts game into hard mode (Decreases number of lives)
         {
             playerName = txtName.Text;
 
@@ -92,6 +92,11 @@ namespace TylerGrenside301Game
 
                 txtName.Focus();
             }
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using System.Reflection;
 using System.Diagnostics;
 using System.IO;
+using System.Xml.Linq;
 
 
 namespace TylerGrenside301Game
@@ -103,6 +104,15 @@ namespace TylerGrenside301Game
                 pnlGame.Invalidate();//makes the paint event fire to redraw the panel
 
             }
+
+        }
+
+        private void BtnCheck_Click(object sender, EventArgs e)
+        {
+            FrmHighScore FrmHighScore2 = new FrmHighScore(Start.playerName, lblScore.Text);
+
+            Hide();
+            FrmHighScore2.ShowDialog();
 
         }
 
