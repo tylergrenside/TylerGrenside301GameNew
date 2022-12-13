@@ -25,7 +25,7 @@ namespace TylerGrenside301Game
             if (Regex.IsMatch(playerName, @"^[a-zA-Z]+$"))//checks playerName for letters
             {
                 //if playerName valid (only letters) 
-                MessageBox.Show("Oh no! It's raining! And you left your pet slime " + playerName + " outside! Slimes are weak against water so you better help guide " + playerName + " to dodge them! Click Ok when you are ready to begin.");
+                MessageBox.Show("Oh no! It's raining! And you left your pet slime " + playerName + " outside! Slimes are weak against water so you better help guide " + playerName + " to dodge them! Click Ok when you are ready to begin. (This is Easy Mode, you will have Ten Lives)");
                 Form1.lives = 10;
                 Form1 frm = new Form1();
                 frm.Show();
@@ -54,7 +54,7 @@ namespace TylerGrenside301Game
             if (Regex.IsMatch(playerName, @"^[a-zA-Z]+$"))//checks playerName for letters
             {
                 //if playerName valid (only letters) 
-                MessageBox.Show("Oh no! It's raining! And you left your pet slime " + playerName + " outside! Slimes are weak against water so you better help guide " + playerName + " to dodge them! Click Ok when you are ready to begin.");
+                MessageBox.Show("Oh no! It's raining! And you left your pet slime " + playerName + " outside! Slimes are weak against water so you better help guide " + playerName + " to dodge them! Click Ok when you are ready to begin. (This is Normal Mode, you will have Five Lives)");
                 Form1.lives = 5;
                 Form1 frm = new Form1();
                 frm.Show();
@@ -78,7 +78,7 @@ namespace TylerGrenside301Game
             if (Regex.IsMatch(playerName, @"^[a-zA-Z]+$"))//checks playerName for letters
             {
                 //if playerName valid (only letters) 
-                MessageBox.Show("Oh no! It's raining! And you left your pet slime " + playerName + " outside! Slimes are weak against water so you better help guide " + playerName + " to dodge them! Click Ok when you are ready to begin.");
+                MessageBox.Show("Oh no! It's raining! And you left your pet slime " + playerName + " outside! Slimes are weak against water so you better help guide " + playerName + " to dodge them! Click Ok when you are ready to begin. (This is Hard Mode, you will have Two Lives)");
                 Form1.lives = 2;
                 Form1 frm = new Form1();
                 frm.Show();
