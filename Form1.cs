@@ -13,6 +13,7 @@ using System.Reflection;
 using System.Diagnostics;
 using System.IO;
 
+
 namespace TylerGrenside301Game
 {
     public partial class Form1 : Form
@@ -25,7 +26,6 @@ namespace TylerGrenside301Game
         bool left, right, up, down;
         public static int score, lives;
         string move;
-
         public Form1()
         {
             InitializeComponent();
@@ -46,9 +46,10 @@ namespace TylerGrenside301Game
             tmrSlime.Enabled = true;
             // pass lives from LblLives Text property to lives variable
             lblLives.Text = lives.ToString();
+            lblName.Text = "Protect " + Start.playerName +"!" ;
         }
 
-
+        
 
 
         private void pnlGame_Paint(object sender, PaintEventArgs e)

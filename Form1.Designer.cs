@@ -38,6 +38,7 @@ namespace TylerGrenside301Game
             this.lblScore = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblLives = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pnlGame
@@ -106,12 +107,22 @@ namespace TylerGrenside301Game
             this.lblLives.TabIndex = 3;
             this.lblLives.Text = "0";
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(12, 4);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(38, 15);
+            this.lblName.TabIndex = 5;
+            this.lblName.Text = "label4";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1013, 447);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblLives);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblScore);
@@ -139,6 +150,7 @@ namespace TylerGrenside301Game
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblLives;
+        private System.Windows.Forms.Label lblName;
     }
 }
 
