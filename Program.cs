@@ -6,8 +6,10 @@ using System.Windows.Forms;
 
 namespace TylerGrenside301Game
 {
+
     static class Program
     {
+        
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

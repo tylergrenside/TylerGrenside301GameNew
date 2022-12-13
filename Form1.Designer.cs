@@ -34,6 +34,10 @@ namespace TylerGrenside301Game
             this.tmrSlime = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.tmrDru = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblLives = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pnlGame
@@ -54,7 +58,7 @@ namespace TylerGrenside301Game
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(823, 22);
+            this.label1.Location = new System.Drawing.Point(921, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 15);
             this.label1.TabIndex = 1;
@@ -66,12 +70,52 @@ namespace TylerGrenside301Game
             this.tmrDru.Interval = 200;
             this.tmrDru.Tick += new System.EventHandler(this.tmrDru_Tick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(718, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Score";
+            // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Location = new System.Drawing.Point(718, 46);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(13, 15);
+            this.lblScore.TabIndex = 3;
+            this.lblScore.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(718, 154);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 15);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Lives";
+            // 
+            // lblLives
+            // 
+            this.lblLives.AutoSize = true;
+            this.lblLives.Location = new System.Drawing.Point(718, 183);
+            this.lblLives.Name = "lblLives";
+            this.lblLives.Size = new System.Drawing.Size(13, 15);
+            this.lblLives.TabIndex = 3;
+            this.lblLives.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1013, 447);
+            this.Controls.Add(this.lblLives);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblScore);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlGame);
             this.KeyPreview = true;
@@ -91,6 +135,10 @@ namespace TylerGrenside301Game
         private System.Windows.Forms.Timer tmrSlime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer tmrDru;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblLives;
     }
 }
 

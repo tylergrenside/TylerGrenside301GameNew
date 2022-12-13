@@ -23,6 +23,7 @@ namespace TylerGrenside301Game
         Slime slime = new Slime();//create object called slime 
         
         bool left, right, up, down;
+        public static int score, lives;
         string move;
 
         public Form1()
@@ -43,10 +44,12 @@ namespace TylerGrenside301Game
         private void Form1_Load(object sender, EventArgs e)
         {
             tmrSlime.Enabled = true;
+            // pass lives from LblLives Text property to lives variable
+            lblLives.Text = lives.ToString();
         }
 
 
- 
+
 
         private void pnlGame_Paint(object sender, PaintEventArgs e)
         {
@@ -79,9 +82,20 @@ namespace TylerGrenside301Game
             for (int i = 0; i < 7; i++)
             {
                 dru[i].MoveDru();
+                if (slime.slimeRec.IntersectsWith(dru[i].druRec))
+                {
+                    //reset planet[i] back to top of panel
+                    dru[i].y = 30; // set  y value of planetRec
+                    lives -= 1;// lose a life
+                    lblLives.Text = lives.ToString();// display number of lives
+                    CheckLives();
+                }
+
                 //if an enemy reaches the bottom of the Game Area reposition it at the top
                 if (dru[i].y >= pnlGame.Height)
                 {
+                    score += 1;//update the score
+                    lblScore.Text = score.ToString();// display score
                     dru[i].y = 10;
                 }
 
@@ -141,6 +155,17 @@ namespace TylerGrenside301Game
             
             }
         }
-   
+        private void CheckLives()
+        {
+            if (lives == 0)
+            {
+                tmrDru.Enabled = false;
+                tmrSlime.Enabled = false;
+                MessageBox.Show("Game Over");
+
+            }
+        }
+
+
     }
 }
